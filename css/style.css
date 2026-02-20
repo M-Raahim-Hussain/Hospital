@@ -1,0 +1,2244 @@
+ body {
+     background-color: var(--bg-light);
+     padding: 50px 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+     color: var(--text-dark);
+     line-height: 1.7;
+     overflow-x: hidden;
+ }
+
+ .hero-section {
+     background: url('https://media.cuh.nhs.uk/images/Cambridge_Cancer_Research_Hospital_5_2.width-840.jpg')center/cover no-repeat;
+
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 90vh;
+     padding: 80px 15px;
+ }
+
+ .hero-overlay {
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(rgba(0, 0, 0, 0.65),
+             rgba(0, 0, 0, 0.65));
+ }
+
+ .hero-content {
+     position: relative;
+     z-index: 2;
+     text-align: center;
+     color: #fff;
+     padding: 0 15px;
+ }
+
+ @media (max-width: 768px) {
+     .hero-section {
+         min-height: 70vh;
+     }
+
+     .hero-content h1 {
+         font-size: 2.2rem;
+     }
+
+     .hero-content p {
+         font-size: 1rem;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .hero-section {
+         padding: 60px 15px;
+         min-height: auto;
+     }
+ }
+
+
+ /* --- UPDATED PREMIUM NAV & LAYOUT --- */
+
+ /* 1. Global Spacing & Typography */
+ .navbar {
+    background-color: rgba(28, 62, 109, 0.98); /* bright blue */
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important; /* bright white */
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+     letter-spacing: 0.5px;
+     white-space: nowrap;
+}
+
+.nav-link:hover{
+    color: #ffffff !important;
+}
+
+ /* Use full width for the container to maximize space between logo and links */
+ .navbar .container {
+     max-width: 95% !important;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .nav-link {
+     font-size: 1rem;
+     /* Reduced size to fit all 11 links */
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+     white-space: nowrap;
+     /* Prevents text from breaking into two lines */
+     padding: 0.5rem 0.6rem !important;
+     /* Tight horizontal padding */
+ }
+
+ /* 2. Premium Contact Button */
+ .nav-link.btn-outline-success {
+     border-radius: 50px;
+     border-width: 2px;
+     font-weight: 700;
+     margin-left: 10px;
+     transition: all 0.3s ease;
+ }
+
+ .nav-link.btn-outline-success:hover {
+     background-color: #c5a059;
+     border-color: #2c7a7b;
+     transform: scale(1.05);
+ }
+
+ .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 !important;
+}
+
+.navbar-logo {
+    height: 50px;      /* use height, NOT max-height */
+    width: auto;
+    display: block;
+    margin-top: -3px;
+}
+
+.navbar-toggler {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+/* --- MOBILE LOGO ENHANCEMENT --- */
+@media (max-width: 991px) {
+    /* 1. Set a fixed, clean height for the navbar */
+    .navbar {
+        min-height: 75px !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Force the logo to be larger and crisp */
+    .navbar-logo {
+        height: 45px !important; /* Increased from 30px */
+        max-height: 45px !important;
+        width: auto !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    /* 3. Ensure the container centers the logo and hamburger vertically */
+    .navbar > .container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 75px !important; /* Must match navbar min-height */
+        padding: 0 20px !important;
+    }
+
+    /* 4. Align the hamburger button perfectly with the larger logo */
+    .navbar-toggler {
+        margin: 0 !important;
+        padding: 8px !important;
+        border: none !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+
+
+ @media (max-width: 768px) {
+     .navbar-logo {
+         max-height: 30px;
+     }
+ }
+
+ @media (max-width: 576px) {
+     .navbar-logo {
+         max-height: 30px;
+     }
+ }
+
+
+ /* about us */
+ .about-title {
+     margin-bottom: 80px;
+ }
+
+ @media (max-width: 768px) {
+     .about-title {
+         margin-bottom: 40px;
+         font-size: 2.2rem;
+     }
+ }
+
+
+ /* 4. Desktop Spacing: Pushes logo and nav to edges */
+ @media (min-width: 1301px) {
+     .navbar-nav {
+         gap: 2px;
+         /* Control exact gap between links here */
+     }
+ }
+
+ .section-padding {
+     padding: 60px 0;
+ }
+
+ .bg-light-gray {
+     background-color: #f8f9fa;
+ }
+
+
+
+ .card:hover {
+     transform: translateY(-5px);
+     transition: 0.3s;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .icon-box {
+     font-size: 2rem;
+     color: rgba(26, 54, 93, 0.95);
+     margin-bottom: 15px;
+ }
+
+ /* toggle bar */
+ /* Smooth transition when clicking links */
+ html {
+     scroll-behavior: smooth;
+ }
+
+ /* Fix the contact button margin on mobile */
+ @media (max-width: 991.98px) {
+     .navbar-nav .nav-link.btn {
+         margin-left: 0 !important;
+         margin-top: 10px;
+         text-align: center;
+     }
+
+     /* Optional: Add a subtle blur effect to the background when menu is open */
+     .navbar-collapse.show {
+         padding: 20px;
+         border-radius: 10px;
+         margin-top: 10px;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     }
+ }
+ /* Restoring the Old Hamburger Menu Look */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #0d6efd !important; /* Your old primary blue */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 1000;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+        margin-top: 0 !important;
+    }
+
+    /* Old style: White centered links */
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+        font-size: 1.1rem;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Remove border from the last button link */
+    .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    /* Ensure the "Contact Us" button stands out on blue */
+    #nav-contact-btn {
+        border: 2px solid white !important;
+        margin-top: 10px;
+        width: auto;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+ /* nav */
+ /* 1. Prevent the 'Contact Us' button from wrapping text */
+ .nav-link.btn {
+     white-space: nowrap;
+     padding: 8px 20px !important;
+ }
+
+ /* Reduce nav link width on laptops */
+ @media (max-width: 1400px) {
+     .navbar-nav .nav-link {
+         font-size: 0.82rem;
+         padding-left: 6px !important;
+         padding-right: 6px !important;
+     }
+
+     #nav-contact-btn {
+         padding: 4px 10px !important;
+         font-size: 0.8rem;
+     }
+ }
+
+
+ /* 3. Style the Contact Us button for mobile view */
+ @media (max-width: 1199px) {
+     .nav-item .btn {
+         margin-left: 0 !important;
+         margin-top: 10px;
+         display: inline-block;
+         width: 100%;
+         /* Makes it a full-width button on mobile for better UX */
+         text-align: center;
+     }
+ }
+
+
+ /* toggle css */
+ /* Premium Dropdown Styling */
+ .dropdown-menu {
+     display: block;
+     /* Required for the transition below */
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(10px);
+     transition: all 0.3s ease;
+     border: none;
+     border-radius: 12px;
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+ }
+
+ .dropdown-menu.show {
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(0);
+ }
+
+ /* Make sure the 'Resources' link still looks like a link */
+ .dropdown-toggle::after {
+     transition: transform 0.3s ease;
+ }
+
+ .dropdown:hover .dropdown-toggle::after {
+     transform: rotate(180deg);
+     /* Arrow flips when hovered */
+ }
+
+ /* Improve the dropdown item hover effect */
+ .dropdown-item {
+     padding: 10px 20px;
+     transition: background 0.2s;
+ }
+
+ .dropdown-item:hover {
+     background-color: #f8f9fa;
+     color: #198754;
+     /* Match your success color */
+ }
+
+ /* rooms card */
+ .facility-card {
+     border: none;
+     border-radius: 14px;
+     overflow: hidden;
+     cursor: pointer;
+     transition: all 0.35s ease;
+     background: #fff;
+ }
+
+ .facility-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+ }
+
+ .facility-img {
+     width: 100%;
+     height: 260px;
+     object-fit: cover;
+ }
+
+ .facility-card .card-body {
+     padding: 20px;
+ }
+
+ .facility-card .card-title {
+     font-weight: 600;
+ }
+
+ .facility-card .card-text {
+     font-size: 0.9rem;
+     color: #6c757d;
+ }
+
+ /* Desktop */
+ @media (min-width: 992px) {
+     .facility-img {
+         height: 320px;
+     }
+ }
+
+ /* modal */
+ img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ .section-padding {
+     padding: 80px 0;
+ }
+
+ @media (max-width: 768px) {
+     .section-padding {
+         padding: 50px 15px;
+     }
+ }
+
+ .modal-content {
+     border-radius: 15px;
+ }
+
+ @media (max-width: 576px) {
+     .modal-dialog {
+         margin: 15px;
+     }
+ }
+
+ .facility-modal {
+     border-radius: 16px;
+ }
+
+ .modal-img {
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+     border-radius: 12px;
+ }
+
+ @media (max-width: 768px) {
+     .modal-img {
+         height: 180px;
+     }
+ }
+
+ .card,
+ .facility-card,
+ .schedule-card {
+     border-radius: var(--radius-md);
+     border: none;
+     transition: var(--transition);
+     box-shadow: var(--shadow-soft);
+ }
+
+ .card:hover,
+ .facility-card:hover,
+ .schedule-card:hover {
+     transform: translateY(-8px);
+     box-shadow: var(--shadow-hover);
+ }
+
+ /* Facility Images */
+ .facility-img {
+     height: 300px;
+     object-fit: cover;
+     transition: transform 0.5s ease;
+ }
+
+ .facility-card:hover .facility-img {
+     transform: scale(1.05);
+ }
+
+ /* =====================
+   ICON BOXES
+===================== */
+ .icon-box {
+     width: 52px;
+     height: 52px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 14px;
+     background: rgba(13, 110, 253, 0.1);
+     color: var(--accent);
+     font-size: 1.6rem;
+     margin-bottom: 18px;
+ }
+
+ /* =====================
+   MODALS
+===================== */
+ .modal-content {
+     border-radius: var(--radius-lg);
+     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+ }
+
+ .modal-img,
+ .doctor-modal-img {
+     border-radius: var(--radius-sm);
+     object-fit: cover;
+ }
+
+ .modal-img {
+     height: 220px;
+ }
+
+ /* =====================
+   HELPDESK MODAL
+===================== */
+ #helpdeskModal .header-gradient {
+     background: linear-gradient(135deg, #0d6efd, #0a58ca);
+ }
+
+ #helpdeskModal .contact-card {
+     border-radius: var(--radius-sm);
+     transition: var(--transition);
+ }
+
+ #helpdeskModal .contact-card:hover {
+     transform: translateY(-4px);
+     box-shadow: var(--shadow-soft);
+ }
+
+ /* =====================
+   RESPONSIVE REFINEMENTS
+===================== */
+ @media (max-width: 768px) {
+     .hero-section {
+         min-height: 70vh;
+         padding: 70px 15px;
+     }
+
+     .hero-content h1 {
+         font-size: 2.1rem;
+     }
+
+     .section-padding {
+         padding: 55px 15px;
+     }
+ }
+
+ /* doctor schedule */
+ /* Premium Variables */
+ :root {
+     --accent-color: #0d6efd;
+     --text-dark: #2d3436;
+     --soft-bg: #f8f9fa;
+ }
+
+ /* Modal Content Refinement */
+ .premium-modal .modal-content {
+     border: none;
+     border-radius: 28px;
+     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+     background: #ffffff;
+ }
+
+ .modal-header {
+     border: none;
+     padding: 1.5rem 1.5rem 0.5rem;
+ }
+
+ .modal-body {
+     padding: 1.5rem 2rem 2.5rem;
+ }
+
+ /* Doctor Profile Card (The Preview) */
+ .doc-profile-header {
+     background: var(--soft-bg);
+     border: 1px solid #edf2f7;
+     border-radius: 20px;
+     padding: 1.2rem;
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     margin-bottom: 2rem;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .doc-avatar {
+     width: 70px;
+     height: 70px;
+     border-radius: 15px;
+     object-fit: cover;
+     border: 3px solid #fff;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+ }
+
+ /* Modern Input Fields */
+ .form-floating>.form-control {
+     border: 1.5px solid #eee;
+     border-radius: 14px;
+     background-color: var(--soft-bg);
+ }
+
+ .form-floating>.form-control:focus {
+     background-color: #fff;
+     border-color: var(--accent-color);
+     box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+ }
+
+ /* Premium Button */
+ .btn-confirm {
+     background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+     border: none;
+     padding: 1rem;
+     border-radius: 16px;
+     font-weight: 600;
+     letter-spacing: 0.5px;
+     box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+ }
+
+ .btn-confirm:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 12px 25px rgba(13, 110, 253, 0.3);
+ }
+
+ /* billing */
+ .billing-card {
+     transition: transform 0.2s, box-shadow 0.2s;
+ }
+
+ .billing-card:hover {
+     transform: translateY(-5px);
+     border-color: #0d6efd;
+ }
+
+ .icon-box {
+     font-size: 2rem;
+     color: #0d6efd;
+     margin-bottom: 10px;
+ }
+
+ /* Remove Arrows/Spinners from Number Input */
+ input[type=number].no-spinners::-webkit-inner-spin-button,
+ input[type=number].no-spinners::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ /* input[type=number].no-spinners {
+    -moz-appearance: textfield;
+} */
+
+ /* Modal Styling */
+ #billingModal .modal-content {
+     border-radius: 15px;
+     overflow: hidden;
+ }
+
+ #billingModal .form-control:focus,
+ #billingModal .form-select:focus {
+     background-color: #fff;
+     border-color: #0d6efd;
+     box-shadow: none;
+ }
+
+ /* Animation for Insurance field */
+ .animate__fadeIn {
+     animation: fadeIn 0.3s ease-in;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(-10px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* patient registration */
+ /* Remove Arrows/Spinners from Number Inputs */
+ /* Chrome, Safari, Edge, Opera */
+ input.no-spinners::-webkit-outer-spin-button,
+ input.no-spinners::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+
+
+ /* Optional: Make the input look slightly more professional */
+ #regAge {
+     text-align: center;
+ }
+
+ .modal-content {
+     border-radius: 15px;
+ }
+
+ /* querry and feedback */
+ .section-padding {
+     padding: 60px 0;
+ }
+
+ #forms .card {
+     transition: all 0.3s ease;
+     border-radius: 12px;
+ }
+
+ #forms .card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+ }
+
+ #forms .form-control:focus {
+     border-color: #0dcaf0;
+     box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.15);
+ }
+
+ /* query and feedback headings and icons */
+ #forms .card .d-flex i,
+#forms .card .d-flex h3 {
+    color: #0d6efd !important; /* btn-info blue */
+}
+
+ #forms .btn-info{
+    background-color: #0a58ca !important;
+ } 
+
+ #forms .btn-info:hover {
+     background-color: #c5a059 !important;
+     border-color: #d6a750;
+ }
+
+ /* icu modal */
+ /* Modal Overlay */
+ .modal-overlay {
+     display: none;
+     position: fixed;
+     z-index: 1050;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.7);
+     backdrop-filter: blur(5px);
+ }
+
+ /* Modal Box */
+ .modal-content {
+     background-color: #fff;
+     margin: 5% auto;
+     padding: 20px;
+     border-radius: 12px;
+     width: 90%;
+     max-width: 800px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+     animation: slideDown 0.3s ease-out;
+ }
+
+ /* Responsive Grid */
+ .modal-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 20px;
+ }
+
+ @media (max-width: 768px) {
+     .modal-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .modal-content {
+         margin: 10% auto;
+     }
+ }
+
+ /* Specific Elements */
+ .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 1px solid #eee;
+     padding-bottom: 10px;
+ }
+
+ .close-btn {
+     font-size: 28px;
+     cursor: pointer;
+     color: #666;
+ }
+
+ .status-badge {
+     background: #e3f2fd;
+     color: #0d47a1;
+     padding: 8px;
+     border-radius: 5px;
+     display: inline-block;
+     margin-top: 10px;
+     font-weight: bold;
+ }
+
+ .btn-action {
+     background: #007bff;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ @keyframes slideDown {
+     from {
+         transform: translateY(-50px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ .status-badge::before {
+     content: "";
+     display: inline-block;
+     width: 8px;
+     height: 8px;
+     background-color: #28a745;
+     /* Green */
+     border-radius: 50%;
+     margin-right: 8px;
+     box-shadow: 0 0 0 rgba(40, 167, 69, 0.4);
+     animation: pulse 2s infinite;
+ }
+
+ @keyframes pulse {
+     0% {
+         transform: scale(0.95);
+         box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+     }
+
+     70% {
+         transform: scale(1);
+         box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+     }
+
+     100% {
+         transform: scale(0.95);
+         box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+     }
+ }
+
+ /* Footer Layout */
+ .modal-footer {
+     display: flex;
+     justify-content: flex-end;
+     gap: 15px;
+     border-top: 1px solid #eee;
+     padding-top: 15px;
+ }
+
+ /* Back button style */
+ .btn-secondary-modal {
+     background: #f8f9fa;
+     border: 1px solid #ddd;
+     padding: 10px 20px;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: 0.2s;
+ }
+
+ /* Emergency Button Style */
+ .btn-emergency {
+     background: #dc3545;
+     /* Emergency Red */
+     color: white !important;
+     text-decoration: none;
+     padding: 10px 25px;
+     border-radius: 6px;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     transition: transform 0.2s ease;
+ }
+
+ .btn-emergency:hover {
+     background: #c82333;
+     transform: translateY(-2px);
+ }
+
+ /* Pulse Animation for the Icon */
+ .pulse-icon {
+     width: 10px;
+     height: 10px;
+     background-color: white;
+     border-radius: 50%;
+     margin-right: 10px;
+     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+     animation: icon-pulse 1.5s infinite;
+ }
+
+ @keyframes icon-pulse {
+     0% {
+         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+     }
+
+     70% {
+         box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+     }
+
+     100% {
+         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+     }
+ }
+
+ /* Fix for Scrolling */
+ .modal-overlay {
+     overflow-y: auto;
+     /* Allows the background to stay still while modal scrolls */
+     padding: 20px 0;
+ }
+
+ .modal-content {
+     max-height: 90vh;
+     /* Limits height to 90% of screen */
+     display: flex;
+     flex-direction: column;
+ }
+
+ .modal-body {
+     overflow-y: auto;
+     /* Makes only the middle part scrollable if content is long */
+     padding: 15px;
+ }
+
+ /* Footer Styling */
+ .modal-footer {
+     padding: 15px;
+     border-top: 1px solid #eee;
+     display: flex;
+     justify-content: flex-end;
+     gap: 10px;
+     background: #fff;
+     border-bottom-left-radius: 12px;
+     border-bottom-right-radius: 12px;
+ }
+
+ .btn-secondary {
+     background: #6c757d;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .btn-emergency {
+     background: #dc3545;
+     color: white !important;
+     text-decoration: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+ }
+
+ /* White pulse for the button icon */
+ .pulse-white {
+     width: 8px;
+     height: 8px;
+     background: white;
+     border-radius: 50%;
+     margin-right: 8px;
+     animation: pulse-animation 1.5s infinite;
+ }
+
+ @keyframes pulse-animation {
+     0% {
+         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+     }
+
+     70% {
+         box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+     }
+
+     100% {
+         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+     }
+ }
+
+
+
+
+ /* academics */
+ /* --- 1. Root Variables --- */
+ :root {
+     --primary-navy: #0c5cbd;
+     /* Deep Trust Navy */
+     --accent-gold: #c5a059;
+     /* Prestige Gold */
+     --text-dark: #2d3436;
+     /* Modern Charcoal */
+     --text-muted: #636e72;
+     /* Slate Grey */
+     --bg-light: #f9fbfd;
+     /* Soft Professional Grey */
+     --white: #ffffff;
+     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+
+ /* --- 2. Global Polish --- */
+ h1,
+ h2,
+ h3,
+ .font-serif {
+     font-family: 'Playfair Display', serif;
+     font-weight: 700;
+     letter-spacing: -0.02em;
+ }
+
+ /* --- Academics Section Enhancements --- */
+ .tracking-widest {
+     letter-spacing: 0.15em;
+ }
+
+ .text-gold {
+     color: var(--accent-gold);
+ }
+
+ .text-navy {
+     color: var(--primary-navy);
+ }
+
+ .border-gold {
+     border-color: var(--accent-gold) !important;
+ }
+
+ .lead {
+     font-size: 1.25rem;
+     font-weight: 500;
+     color: var(--primary-navy);
+ }
+
+ .mb-n4 {
+     margin-bottom: -1.5rem !important;
+ }
+
+ /* Enhancing the image container to look more "Academic" */
+ .academics-section img {
+     border-left: 10px solid var(--primary-navy);
+     /* Solid accent bar */
+     height: 500px;
+     object-fit: cover;
+     width: 100%;
+ }
+
+ @media (max-width: 991px) {
+     .academics-section img {
+         height: 350px;
+         border-left: none;
+         border-top: 10px solid var(--primary-navy);
+     }
+ }
+
+ /* --- 3. Section Architecture --- */
+ section,
+ .section {
+     padding: 100px 0;
+     position: relative;
+     display: block;
+     /* Ensures visibility */
+ }
+
+ /* Zebra Striping for clear content separation */
+ section:nth-child(even) {
+     background-color: var(--bg-light);
+ }
+
+ section:nth-child(odd) {
+     background-color: var(--white);
+ }
+
+ /* --- 4. Success Stories Fix & Styling --- */
+ /* This targets both the ID and the class used in your HTML */
+ #success-stories,
+ .bg-medical {
+     background-color: var(--primary-navy) !important;
+     color: var(--white) !important;
+     padding: 120px 0;
+ }
+
+ #success-stories h2,
+ .bg-medical h2 {
+     color: var(--white) !important;
+ }
+
+ #success-stories .opacity-75,
+ .bg-medical .opacity-75 {
+     color: rgba(255, 255, 255, 0.8) !important;
+ }
+
+ /* --- 5. Images & Layout --- */
+ .img-fluid {
+     transition: var(--transition);
+ }
+
+ /* Adds the premium shadow to your vacancy/academic images */
+ .section-img,
+ .img-container {
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+     border-radius: 4px;
+     transition: var(--transition);
+ }
+
+ .section-img:hover {
+     transform: translateY(-5px);
+ }
+
+ /* --- 6. Premium Buttons --- */
+ .btn {
+     padding: 15px 20px;
+     font-weight: 600;
+     letter-spacing: 0.8px;
+     text-transform: uppercase;
+     font-size: 0.8rem;
+     border-radius: 0;
+     /* Executive sharp edges */
+     transition: var(--transition);
+ }
+
+ /* Primary Button (Navy) */
+ .btn-primary {
+     background-color: var(--primary-navy);
+     border: 1px solid var(--primary-navy);
+     color: var(--white);
+ }
+
+ .btn-primary:hover {
+     background-color: var(--accent-gold);
+     border-color: var(--accent-gold);
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+ }
+
+ /* Outline Light Button (Used in Success Stories) */
+ .btn-outline-light {
+     border: 1px solid rgba(255, 255, 255, 0.4);
+     color: var(--white);
+ }
+
+ .btn-outline-light:hover {
+     background-color: var(--white);
+     color: var(--primary-navy);
+     border-color: var(--white);
+ }
+
+ /* Outline Dark Button (Used in Academics) */
+ .btn-outline-dark {
+     border: 1px solid var(--primary-navy);
+     color: var(--primary-navy);
+ }
+
+ .btn-outline-dark:hover {
+     background-color: var(--primary-navy);
+     color: var(--white);
+ }
+
+ /* --- 7. Modals & Forms --- */
+ .modal-content {
+     border: none;
+     border-radius: 0;
+     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.2);
+ }
+
+ .modal-header {
+     background-color: var(--primary-navy);
+     color: var(--white);
+     border: none;
+     padding: 1.5rem 2.5rem;
+ }
+
+ .modal-header .btn-close {
+     filter: invert(1) grayscale(100%) brightness(200%);
+     /* Makes close button white */
+ }
+
+ .modal-body {
+     padding: 3rem 2.5rem;
+ }
+
+ /* Premium Form Inputs */
+ .form-select,
+ .form-control {
+     border: 1px solid #e1e1e1;
+     border-radius: 0;
+     font-size: 0.95rem;
+ }
+
+ .form-select:focus,
+ .form-control:focus {
+     border-color: var(--accent-gold);
+     box-shadow: none;
+ }
+
+ /* --- 8. Responsive Adjustments --- */
+ @media (max-width: 991px) {
+
+     section,
+     .section {
+         padding: 60px 0;
+         text-align: center;
+     }
+
+     .btn {
+         width: auto;
+         margin-bottom: 10px;
+     }
+
+     .order-lg-1 {
+         order: 1;
+     }
+
+     .order-lg-2 {
+         order: 2;
+     }
+
+     img {
+         margin-top: 30px;
+     }
+ }
+
+ /* contact us */
+ #CH-Contact-Section {
+     position: relative;
+     background: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+     background-size: cover;
+     z-index: 1;
+     /* Keep section base level */
+ }
+
+ #CH-Contact-Section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to bottom, rgba(33, 37, 41, 0.85), rgba(33, 37, 41, 0.75));
+     z-index: -1;
+ }
+
+ /* Colors and Buttons */
+ .text-hospital-cyan {
+     color: #206cca !important;
+ }
+
+ .bg-hospital-cyan {
+     background-color: #007bff !important;
+ }
+
+ .btn-hospital-send {
+     background-color: #1663c2 !important;
+     color: white !important;
+     border: none;
+     transition: 0.3s;
+ }
+
+ .btn-hospital-send:hover {
+     background-color: #c5a059 !important;
+ }
+
+ /* Form Styling */
+ .hospital-input {
+     border: none !important;
+     border-bottom: 2px solid #dee2e6 !important;
+     border-radius: 0 !important;
+     padding-left: 0 !important;
+     box-shadow: none !important;
+ }
+
+ /* Fix to ensure Modal is on top of everything */
+ .ch-modal-top {
+     z-index: 9999 !important;
+ }
+
+ /* Teams CSS */
+ :root {
+     --primary-color: #0d6efd;
+     --accent-color: #00d2ff;
+     --text-dark: #1a1a1a;
+     --bg-light: #f8f9fa;
+ }
+
+ .section-title {
+     font-weight: 800;
+     letter-spacing: -1px;
+     margin-bottom: 50px;
+     position: relative;
+ }
+
+ .section-title::after {
+     content: "";
+     width: 60px;
+     height: 4px;
+     background: var(--primary-color);
+     position: absolute;
+     bottom: -10px;
+     left: 50%;
+     transform: translateX(-50%);
+     border-radius: 2px;
+ }
+
+ /* Modern Team Card Styling */
+ .team-card {
+     background: #ffffff;
+     border: none;
+     border-radius: 24px;
+     padding: 40px 20px;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+ }
+
+ .team-card:hover {
+     transform: translateY(-12px);
+     box-shadow: 0 30px 60px rgba(13, 110, 253, 0.15);
+ }
+
+ /* Image Wrapper with Gradient Border */
+ .img-wrapper {
+     width: 140px;
+     height: 140px;
+     margin: 0 auto 25px;
+     position: relative;
+     z-index: 1;
+ }
+
+ .img-wrapper::before {
+     content: "";
+     position: absolute;
+     top: -5px;
+     left: -5px;
+     right: -5px;
+     bottom: -5px;
+     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+     border-radius: 50%;
+     z-index: -1;
+ }
+
+ .img-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 4px solid #fff;
+ }
+
+ .team-info h3 {
+     font-weight: 700;
+     font-size: 1.4rem;
+     margin-bottom: 5px;
+     color: var(--text-dark);
+ }
+
+ .team-info span {
+     display: block;
+     color: var(--primary-color);
+     font-weight: 600;
+     font-size: 0.9rem;
+     text-transform: uppercase;
+     letter-spacing: 1.5px;
+     margin-bottom: 20px;
+ }
+
+ /* Social Icons */
+ .social-links a {
+     color: #adb5bd;
+     font-size: 1.2rem;
+     margin: 0 10px;
+     transition: color 0.3s;
+ }
+
+ .social-links a:hover {
+     color: var(--primary-color);
+ }
+
+ /* Custom Carousel Controls */
+ .carousel-control-prev,
+ .carousel-control-next {
+     width: 5%;
+     opacity: 0.8;
+ }
+
+ .control-icon {
+     background: white;
+     color: var(--text-dark);
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     transition: 0.3s;
+ }
+
+ .control-icon:hover {
+     background: var(--primary-color);
+     color: white;
+ }
+
+ /* Indicators */
+ .carousel-indicators [data-bs-target] {
+     background-color: var(--primary-color);
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     margin: 0 6px;
+ }
+
+
+ /* fotters css */
+ /* 2026 Modern Color Palette */
+ :root {
+     --footer-bg: #0b1120;
+     /* Deep Navy Space */
+     --accent-color: #38bdf8;
+     /* Modern Cyan */
+     --glass-bg: rgba(255, 255, 255, 0.05);
+     --glass-border: rgba(255, 255, 255, 0.1);
+ }
+
+ .footer-ultra-modern {
+     background-color: var(--footer-bg);
+     color: #fff;
+     position: relative;
+ }
+
+ /* Wave Shape Divider */
+ .footer-divider {
+     position: absolute;
+     top: -100px;
+     left: 0;
+     width: 100%;
+     line-height: 0;
+ }
+
+ .footer-divider .shape-fill {
+     fill: var(--footer-bg);
+ }
+
+ /* Glass Newsletter */
+ .glass-newsletter {
+     background: rgba(255, 255, 255, 0.03);
+     backdrop-filter: blur(10px);
+     border: 1px solid var(--glass-border);
+     padding: 30px 40px;
+     border-radius: 30px;
+     margin-top: -80px;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+ }
+
+ .newsletter-form .form-control {
+     background: rgba(255, 255, 255, 0.08);
+     border: 1px solid var(--glass-border);
+     color: #fff;
+     border-radius: 12px;
+     padding: 12px 20px;
+ }
+
+ .btn-accent {
+     background: #007bff;
+     color: #0b1120;
+     font-weight: 700;
+     border-radius: 12px;
+     padding: 12px 25px;
+     transition: 0.3s;
+ }
+
+ .btn-accent:hover {
+     background: #c5a059;
+     transform: scale(1.05);
+ }
+
+ /* Logo & Branding */
+ .footer-logo {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+ }
+
+ .logo-icon {
+     font-size: 2rem;
+     color: #007bff;
+ }
+
+ .logo-text {
+     font-weight: 850;
+     letter-spacing: 1px;
+     font-size: 1.25rem;
+ }
+
+ .logo-text span {
+     font-weight: 580;
+     color: #007bff;
+ }
+
+ /* Nav Links */
+ .footer-heading {
+     font-weight: 700;
+     font-size: 1rem;
+     margin-bottom: 25px;
+     color: #fff;
+ }
+
+ .footer-nav {
+     list-style: none;
+     padding: 0;
+ }
+
+ .footer-nav li {
+     margin-bottom: 12px;
+ }
+
+ .footer-nav a {
+     color: rgba(255, 255, 255, 0.6);
+     text-decoration: none;
+     transition: 0.3s;
+     font-size: 0.95rem;
+ }
+
+ .footer-nav a:hover {
+     color: #007bff;
+     padding-left: 8px;
+ }
+
+ /* Socials */
+ .social-glass-icons a {
+     width: 40px;
+     height: 40px;
+     background: var(--glass-bg);
+     border: 1px solid var(--glass-border);
+     color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     text-decoration: none;
+     transition: 0.3s;
+ }
+
+ .social-glass-icons a:hover {
+     background: #007bff;
+     color: #000;
+     transform: translateY(-5px);
+ }
+
+ /* Emergency Card */
+ .emergency-glass-card {
+     background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+     border: 1px solid var(--glass-border);
+     border-radius: 20px;
+     padding: 25px;
+ }
+
+ .text-accent {
+     color: #007bff;
+ }
+
+ /* Pulse Animation */
+ .pulse-icon {
+     width: 50px;
+     height: 50px;
+     background: #007bff;
+     color: #0b1120;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.2rem;
+     animation: pulse-border 2s infinite;
+ }
+
+ @keyframes pulse-border {
+     0% {
+         box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
+     }
+
+     100% {
+         box-shadow: 0 0 0 15px rgba(56, 189, 248, 0);
+     }
+ }
+
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+ }
+
+ .btn-outline-primary {
+     border-width: 2px;
+     font-weight: 600;
+     transition: all 0.3s ease;
+ }
+
+ .btn-outline-primary:hover {
+     transform: scale(1.03);
+     box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+ }
+
+ #facilityChoiceModal .modal-content {
+     background: linear-gradient(145deg, #ffffff, #f0f4f8);
+ }
+
+ /* Make navbar links stay in one line until collapse kicks in */
+ .navbar-nav {
+     flex-wrap: nowrap;
+ }
+
+ /* Reduce gap on medium screens to avoid wrapping */
+ @media (max-width: 1199px) {
+     .navbar-nav {
+         gap: 5px;
+         /* controls spacing between links */
+     }
+
+     .nav-link.btn {
+         width: auto;
+         /* ensure Contact button doesn’t stretch full width here */
+         margin-left: 0 !important;
+         margin-top: 0 !important;
+     }
+ }
+
+ /* Collapse Contact button under links only on smaller devices */
+ @media (max-width: 991.98px) {
+     .nav-link.btn {
+         width: 100%;
+         margin-top: 10px;
+     }
+ }
+
+ /* success stories */
+ #success-stories .btn-outline-light:hover {
+    color: #ffffff !important;         /* gold text on hover */
+    border-color: #d6a954 !important;  /* gold border on hover */
+    background-color: #c5a059 !important; /* keep background transparent */
+    transition: color 0.3s, border-color 0.3s;
+}
+
+
+/* 1. RESET & INITIAL STATE */
+/* 1. Fix the List Container */
+#fabMenu {
+    list-style: none !important; /* Removes the dots */
+    padding: 0 !important;      /* Removes the default indentation */
+    margin: 0 !important;
+    display: none;               /* Remove !important from here */
+    position: absolute;
+    bottom: 80px;                /* Sits above the FAB button */
+    right: 0;
+    background-color: var(--bs-body-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    min-width: 180px;
+    overflow: hidden;            /* Ensures hover effects stay inside rounded corners */
+    z-index: 1000;
+}
+
+/* 2. Toggle the visibility */
+#fabMenu.show {
+    display: block !important;
+}
+
+/* 3. Style the links so they don't look like plain text */
+#fabMenu .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: var(--bs-body-color);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+#fabMenu .dropdown-item:hover {
+    background-color: var(--bs-tertiary-bg);
+}
+
+/* 4. Fix the icon alignment */
+#fabMenu .dropdown-item i {
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 3. FAB BUTTON STYLE */
+.fab-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.btn-profile-fab {
+    width: 60px;
+    height: 60px;
+    background-color: #0d47a1; /* your deep blue */
+    color: white !important;
+    border: none;
+    border-radius: 18px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-profile-fab:hover {
+    background-color: #0b3c91; /* slightly darker blue for hover */
+    box-shadow: 0 6px 16px rgba(13, 71, 161, 0.35);
+}
+
+
+/* 4. THEME & MENU ITEMS */
+[data-bs-theme="dark"] #fabMenu {
+    background-color: #233138 !important;
+    color: #e9edef !important;
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #111b21 !important;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.fab-hidden {
+    display: none !important;
+}
+
+/* --- 5. LOGIN PAGE FIXES (THE LOOPHOLE SOLUTION) --- */
+
+/* Force button visibility in ALL modes */
+.btn-teal {
+    background-color: #1455b8 !important;
+    color: #ffffff !important; /* Forces white text so it's visible on teal */
+    border: none !important;
+    font-weight: 700 !important;
+    padding: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-teal:hover {
+    background-color: rgb(11, 60, 145) !important;
+    box-shadow: 0 4px 12px rgba(11, 60, 145, 0.3) !important;
+}
+
+/* Light Mode Card Styling */
+[data-bs-theme="light"] .card {
+    background-color: #ffffff !important;
+    color: #111b21 !important;
+    border: 1px solid #e9edef !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dark Mode Card Styling (Matches your screenshot) */
+[data-bs-theme="dark"] .card {
+    background-color: #233138 !important;
+    color: #e9edef !important;
+    border: none !important;
+}
+
+/* Form Input Fixes for Dark Mode */
+[data-bs-theme="dark"] .form-control {
+    background-color: #2a3942 !important;
+    border: 1px solid #374045 !important;
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+    background-color: #2a3942 !important;
+    border-color: rgb(11, 60, 145) !important;
+    box-shadow: 0 0 0 0.25rem rgb(11, 60, 145, 0.2) !important;
+    color: #ffffff !important;
+}
+/* Styling for the helper links */
+.text-teal {
+    color: #2372e9 !important;
+    transition: color 0.2s ease;
+}
+ 
+.text-teal:hover {
+    color: #0a64ff !important;
+}
+
+/* Ensure the divider looks good in dark mode */
+[data-bs-theme="dark"] hr {
+    border-color: #374045 !important;
+}
+
+/* Setting */
+/* Settings Page Styling */
+.btn-outline-teal {
+    border-color: #1455b8 !important;
+    color: #0d47a1 !important;
+}
+
+.btn-outline-teal:hover {
+    background-color: #0d47a1 !important;
+    color: white !important;
+}
+
+.list-group-item {
+    background-color: transparent !important;
+    color: inherit !important;
+    border-color: rgba(0,0,0,0.05) !important;
+}
+
+[data-bs-theme="dark"] .list-group-item {
+    border-color: rgba(255,255,255,0.05) !important;
+}
+
+.border-teal {
+    border-color: #1455b8 !important;
+}
+
+[data-bs-theme="dark"] .dropdown-item i {
+    color: #0d47a1;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover i {
+    color: #0b3c91;
+}
+
+/* ============================================================
+   GLOBAL DARK MODE OVERRIDE (The "Mess" Fixer)
+   This forces hard-coded white backgrounds to become dark 
+   when [data-bs-theme="dark"] is active.
+   ============================================================ */
+
+[data-bs-theme="dark"] {
+    /* 1. Force Body & Sections */
+    body, section, .section, .bg-light, .bg-light-gray {
+        background-color: #111b21 !important;
+        color: #e9edef !important;
+    }
+
+    /* 2. Fix All Cards (Team, Facility, Billing, etc.) */
+    .card, .facility-card, .team-card, .billing-card, .schedule-card {
+        background-color: #233138 !important;
+        color: #e9edef !important;
+        border-color: #374045 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* 3. Fix All Modals (ICU, Billing, Booking) */
+    .modal-content, .modal-footer, #billingModal .modal-content, #facilityChoiceModal .modal-content {
+        background: #233138 !important;
+        background-color: #233138 !important; /* Overrides linear gradients */
+        color: #e9edef !important;
+        border: 1px solid #374045 !important;
+    }
+
+    /* 4. Fix Forms & Inputs */
+    .form-control, .form-select, .hospital-input {
+        background-color: #2a3942 !important;
+        border-color: #374045 !important;
+        color: #ffffff !important;
+    }
+
+    .form-control:focus, .hospital-input:focus {
+        background-color: #2a3942 !important;
+        color: #ffffff !important;
+    }
+
+    /* 5. Fix Text Colors that were locked to dark gray */
+    .card-text, .text-muted, .footer-nav a, .team-info h3 {
+        color: #adb5bd !important;
+    }
+
+    /* 6. Fix Academics & Success Stories Hard-coding */
+    section:nth-child(even), section:nth-child(odd) {
+        background-color: transparent !important; /* Let the body color show through */
+    }
+
+}
+
+/* our facilities new design */
+/* --- Modern Facilities Section --- */
+.header-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin-top: 15px;
+}
+
+.facility-card-modern {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 400px; /* Fixed height for consistency */
+    transition: var(--transition);
+}
+
+.facility-image-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.facility-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.facility-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(12, 92, 189, 0.9) 10%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    transition: background 0.4s ease;
+}
+
+.facility-content {
+    color: var(--white);
+    transform: translateY(40px);
+    transition: transform 0.4s ease;
+}
+
+.facility-content i {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+}
+
+.facility-content h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.facility-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.btn-view-more {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-gold);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* --- Hover Effects --- */
+.facility-card-modern:hover .facility-image-wrapper img {
+    transform: scale(1.1);
+    filter: blur(2px) brightness(0.8);
+}
+
+.facility-card-modern:hover .facility-overlay {
+    background: linear-gradient(to top, rgba(12, 92, 189, 0.95) 30%, transparent 100%);
+}
+
+.facility-card-modern:hover .facility-content {
+    transform: translateY(0);
+}
+
+.facility-card-modern:hover .btn-view-more {
+    opacity: 1;
+}
+
+/* Dark Mode Adjustment */
+[data-bs-theme="dark"] .facility-overlay {
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 10%, transparent 100%);
+}
+
+/* --- Modern Service Cards --- */
+.service-divider {
+    width: 50px;
+    height: 4px;
+    background-color: var(--accent-gold);
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.service-card-premium {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    height: 100%;
+}
+
+.service-icon-box {
+    width: 70px;
+    height: 70px;
+    background: rgba(13, 110, 253, 0.05);
+    color: #0d6efd;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;        /* Centering the icon */
+    justify-content: center;    /* Centering the icon */
+    border-radius: 18px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.service-card-premium h4 {
+    color: var(--primary-navy);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.service-card-premium p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.service-link {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+/* --- Hover State --- */
+.service-card-premium:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+.service-card-premium:hover .service-icon-box {
+    background: #0d6efd;
+    color: #ffffff;
+    transform: rotateY(360deg); /* Modern flip effect */
+}
+
+/* Highlighted (Active) Card Style */
+.service-card-premium.active {
+    background: linear-gradient(145deg, #ffffff, #f8faff);
+    border-left: 5px solid #0d6efd;
+}
+
+/* Dark Mode Support */
+[data-bs-theme="dark"] .service-card-premium {
+    background: #233138 !important;
+    border-color: #374045 !important;
+}
+
+[data-bs-theme="dark"] .service-card-premium h4 {
+    color: #ffffff;
+}
+
+/* --- Premium Modal Styling --- */
+.premium-modal .modal-content {
+    border-radius: 30px !important; /* Premium rounded look */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-img-side {
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
+
+.premium-modal .modal-body h3 {
+    color: var(--primary-navy);
+    font-weight: 700;
+}
+
+/* Responsiveness: Padding adjustment for mobile */
+@media (max-width: 767.98px) {
+    .premium-modal .modal-body {
+        padding: 2rem 1.5rem !important; /* Scannability and spacing */
+    }
+}
+
+/* Dark Mode Integration */
+[data-bs-theme="dark"] .premium-modal .modal-content {
+    background-color: #233138 !important;
+}
+
+[data-bs-theme="dark"] .premium-modal .modal-body h3 {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .premium-modal .text-muted {
+    color: #adb5bd !important;
+}
+
+/* --- Isolated Service Modal Styles --- */
+.svc-modal-custom .modal-content {
+    border-radius: 25px !important;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.svc-side-img {
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+}
+
+.svc-modal-custom .text-navy {
+    color: #0a235c !important; /* Your specific navy */
+}
+
+/* Force Dark Mode Compatibility */
+[data-bs-theme="dark"] .svc-modal-custom .modal-content {
+    background-color: #1a242b !important;
+    color: #e9edef !important;
+}
+
+[data-bs-theme="dark"] .svc-modal-custom .text-navy {
+    color: #ffffff !important;
+}
+
+/* COMMAND MODULE STYLING */
+.unit-module {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.unit-module:hover {
+    background: rgba(13, 110, 253, 0.08);
+    border-color: #0d6efd;
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.unit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.unit-icon {
+    width: 55px;
+    height: 55px;
+    background: #0d6efd;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+}
+
+.unit-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #94a3b8;
+    background: rgba(255,255,255,0.05);
+    padding: 6px 12px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.unit-body h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.unit-body p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.unit-footer {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+}
+
+.load-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.load-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0d6efd, #60a5fa);
+    border-radius: 2px;
+}
+
+.load-text {
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
